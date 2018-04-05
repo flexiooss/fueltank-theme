@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Resources</title>
+  <link media="all" rel="stylesheet" href="../css/normalize.css" />
+  <link media="all" rel="stylesheet" href="../css/font.css" />
+  <link media="all" rel="stylesheet" type="text/css" href="../css/layout.css" />
+  <link media="all" rel="stylesheet" type="text/css" media="all and (min-width: 800px)" href="../css/layout.desktop.css" />
+
+</head>
+
+<body>
+  <main>
+
+    <header id="site-header">
+      <div id="site-title">
+        logo docs
+      </div>
+      <nav id="site-nav">
+        <ul>
+          <li>
+            <a href="#">home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside id="site-aside">
+      <nav id="aside-nav">
+        <ul>
+          <li>
+            Resources
+            <nav>
+              <ul>
+                <li>
+                  <a href="#AccountResources-resource">AccountResources</a>
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="#Resource-resource">Resource</a>
+                        <nav>
+                          <ul>
+                            <li>
+                              <a href="#Schema-resource">Schema</a>
+                              <nav>
+                                <ul>
+                                  <li>
+                                    <a href="#SchemaVersions-resource">SchemaVersions</a>
+                                    <nav>
+                                      <ul>
+                                        <li>
+                                          <a href="#SchemaVersion-resource">SchemaVersion</a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </li>
+                                </ul>
+                              </nav>
+                            </li>
+                            <li>
+                              <a href="#Record-resource">Record</a>
+                              <nav>
+                                <ul>
+                                  <li>
+                                    <a href="#RecordVersions-resource">RecordVersions</a>
+                                    <nav>
+                                      <ul>
+                                        <li>
+                                          <a href="#RecordVersion-resource">RecordVersion</a>
+                                        </li>
+                                      </ul>
+                                    </nav>
+                                  </li>
+                                </ul>
+                              </nav>
+                            </li>
+                          </ul>
+                        </nav>
+                      </li>
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <a href="#api-types">API Types</a>
+            <nav>
+              <ul>
+                <li>
+                  <a href="#ResourceDescription-type">ResourceDescription</a>
+                </li>
+                <li>
+                  <a href="#ResourceCreationData-type">ResourceCreationData</a>
+                </li>
+                <li>
+                  <a href="#Schema-type">Schema</a>
+                </li>
+                <li>
+                  <a href="#SchemaProperty-type">SchemaProperty</a>
+                </li>
+                <li>
+                  <a href="#Value-type">Value</a>
+                </li>
+                <li>
+                  <a href="#PropertyConstraint-type">PropertyConstraint</a>
+                </li>
+                <li>
+                  <a href="#SchemaUpdate-type">SchemaUpdate</a>
+                </li>
+                <li>
+                  <a href="#CoreScenario-type">CoreScenario</a>
+                </li>
+                <li>
+                  <a href="#Error-type">Error</a>
+                </li>
+                <li>
+                  <a href="#all-types">All types</a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <a href="#overview">Overview</a>
+          </li>
+        </ul>
+    </aside>
+
+    <content id="site-content">
+      <article class="resource" id="AccountResources-resource">
+        <header>
+          <h1>AccountResources</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>Account resource list</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="AccountResources-get-method">
+            <h2>GET /{
+              <b>account</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>range: string</h4>
+                </section>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>complete list of ResourceDescription or last elements of the list of ResourceDescription</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Content-Range: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>Accept-Range: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#ResourceDescription-type">ResourceDescription</a>[]</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>206</h4>
+                      <div class="description">
+                        <p>partial list of ResourceDescription</p>
+                      </div>
+                      <section class="headers">
+                        <h5>headers</h5>
+                        <section class="header">
+                          <h6>Content-Range: string</h6>
+                        </section>
+                        <section class="header">
+                          <h6>Accept-Range: string</h6>
+                        </section>
+                      </section>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#ResourceDescription-type">ResourceDescription</a>[]</h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>416</h4>
+                          <div class="description">
+                            <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
+                          </div>
+                          <section class="headers">
+                            <h5>headers</h5>
+                            <section class="header">
+                              <h6>Content-Range: string</h6>
+                            </section>
+                            <section class="header">
+                              <h6>Accept-Range: string</h6>
+                            </section>
+                          </section>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>404</h4>
+                              <div class="description">
+                                <p>resource not found, see code.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                                <section class="response">
+                                  <h4>500</h4>
+                                  <div class="description">
+                                    <p>UNEXPECTED_ERROR.</p>
+                                  </div>
+                                  <section class="response-payload-part">
+                                    <h5>response payload</h5>
+                                    <section class="response-payload-part">
+                                      <h6>application/json:
+                                        <a href="#Error-type">Error</a>
+                                      </h6>
+                                    </section>
+                                  </section>
+                                  <section>
+                                  </section>
+                                </section>
+          </article>
+          <article class="method" id="AccountResources-post-method">
+            <h2>POST /{
+              <b>account</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json:
+                    <a href="#ResourceCreationData-type">ResourceCreationData</a>
+                  </h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>201</h4>
+                  <div class="description">
+                    <p>a ResourceDescription resoure is created given the ResourceCreationData provided. the created resource
+                      uri is returned.</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Location: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-Entity-Id: string</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>request is not acceptable. Code ILLEGAL_RESOURCE_CREATION.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>resource not found, see code.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="Resource-resource">
+        <header>
+          <h1>Resource</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>Resource record list</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="Resource-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="query-parameters">
+                <h3>query parameters</h3>
+                <section class="query-parameter">
+                  <h4>slugified: string</h4>
+                </section>
+                <section class="query-parameter">
+                  <h4>filter: string</h4>
+                  <div class="description">
+                    <p>Record filter expression. Syntax examples :</p>
+                    <ul>
+                      <li>property eq 'yop yop'</li>
+                      <li>property neq true</li>
+                      <li>property lt '18:56:44.123Z'</li>
+                      <li>property gte '1977-04-22T18:56:44.123Z'</li>
+                      <li>property gt 12</li>
+                      <li>property lte 16.58965</li>
+                      <li>property starts with 'abc'</li>
+                      <li>property ends with 'def'</li>
+                      <li>property contains 'cd'</li>
+                      <li>nested.object.property eq 'toto'</li>
+                    </ul>
+                    <p>Filter expressions are parsed and validated againts the schema, you won't be able to filter an integer
+                      property with a string litteral or a date property with a string that doesn't parse as a date.</p>
+                    <p>Filter can be an ANDed list of expressions :</p>
+                    <ul>
+                      <li>property gt 12 and property lt 16</li>
+                    </ul>
+                  </div>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>range: string</h4>
+                </section>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>complete list of object or last elements of the list of object</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Content-Range: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>Accept-Range: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object[][]</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>206</h4>
+                      <div class="description">
+                        <p>partial list of object</p>
+                      </div>
+                      <section class="headers">
+                        <h5>headers</h5>
+                        <section class="header">
+                          <h6>Content-Range: string</h6>
+                        </section>
+                        <section class="header">
+                          <h6>Accept-Range: string</h6>
+                        </section>
+                      </section>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json: object[][]</h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>416</h4>
+                          <div class="description">
+                            <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
+                          </div>
+                          <section class="headers">
+                            <h5>headers</h5>
+                            <section class="header">
+                              <h6>Content-Range: string</h6>
+                            </section>
+                            <section class="header">
+                              <h6>Accept-Range: string</h6>
+                            </section>
+                          </section>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>404</h4>
+                              <div class="description">
+                                <p>resource not found, see code.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                                <section class="response">
+                                  <h4>500</h4>
+                                  <div class="description">
+                                    <p>UNEXPECTED_ERROR.</p>
+                                  </div>
+                                  <section class="response-payload-part">
+                                    <h5>response payload</h5>
+                                    <section class="response-payload-part">
+                                      <h6>application/json:
+                                        <a href="#Error-type">Error</a>
+                                      </h6>
+                                    </section>
+                                  </section>
+                                  <section>
+                                  </section>
+                                </section>
+          </article>
+          <article class="method" id="Resource-post-method">
+            <h2>POST /{
+              <b>account</b>}/{
+              <b>resource-name</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json: object</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>201</h4>
+                  <div class="description">
+                    <p>a object resoure is created given the object provided. the created resource uri is returned.</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Location: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-Entity-Id: string</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>request is not acceptable. Code ILLEGAL_RESOURCE_CREATION.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>resource not found, see code.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="Schema-resource">
+        <header>
+          <h1>Schema</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>Resource schema</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="Schema-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/schema</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>a Schema with the given resource-name is found and returned</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#Schema-type">Schema</a>
+                      </h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <div class="description">
+                        <p>no Schema found with the given resource-name. Code RESOURCE_NOT_FOUND.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <div class="description">
+                            <p>UNEXPECTED_ERROR.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          <article class="method" id="Schema-put-method">
+            <h2>PUT /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/schema</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json:
+                    <a href="#SchemaUpdate-type">SchemaUpdate</a>
+                  </h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>the Schema with id resource-name update was successful</p>
+                  </div>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#Schema-type">Schema</a>
+                      </h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>ressource change is not acceptable. Code ILLEGAL_RESOURCE_CHANGE.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>no Schema found with the given resource-name. Code RESOURCE_NOT_FOUND.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          <article class="method" id="Schema-patch-method">
+            <h2>PATCH /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/schema</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json:
+                    <a href="#SchemaUpdate-type">SchemaUpdate</a>
+                  </h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>the Schema with id resource-name update was successful</p>
+                  </div>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#Schema-type">Schema</a>
+                      </h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>ressource change is not acceptable. Code ILLEGAL_RESOURCE_CHANGE.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>no Schema found with the given resource-name. Code RESOURCE_NOT_FOUND.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="SchemaVersions-resource">
+        <header>
+          <h1>SchemaVersions</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>version history for resource-name schema</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="SchemaVersions-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/schema/versions</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>range: string</h4>
+                </section>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>complete list of Schema or last elements of the list of Schema</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Content-Range: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>Accept-Range: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#Schema-type">Schema</a>[]</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>206</h4>
+                      <div class="description">
+                        <p>partial list of Schema</p>
+                      </div>
+                      <section class="headers">
+                        <h5>headers</h5>
+                        <section class="header">
+                          <h6>Content-Range: string</h6>
+                        </section>
+                        <section class="header">
+                          <h6>Accept-Range: string</h6>
+                        </section>
+                      </section>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Schema-type">Schema</a>[]</h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>416</h4>
+                          <div class="description">
+                            <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
+                          </div>
+                          <section class="headers">
+                            <h5>headers</h5>
+                            <section class="header">
+                              <h6>Content-Range: string</h6>
+                            </section>
+                            <section class="header">
+                              <h6>Accept-Range: string</h6>
+                            </section>
+                          </section>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>404</h4>
+                              <div class="description">
+                                <p>resource not found, see code.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                                <section class="response">
+                                  <h4>500</h4>
+                                  <div class="description">
+                                    <p>UNEXPECTED_ERROR.</p>
+                                  </div>
+                                  <section class="response-payload-part">
+                                    <h5>response payload</h5>
+                                    <section class="response-payload-part">
+                                      <h6>application/json:
+                                        <a href="#Error-type">Error</a>
+                                      </h6>
+                                    </section>
+                                  </section>
+                                  <section>
+                                  </section>
+                                </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="SchemaVersion-resource">
+        <header>
+          <h1>SchemaVersion</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>a specific schema version for ressource</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="SchemaVersion-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/schema/versions/{
+              <b>schema-version</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>schema-version: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#Schema-type">Schema</a>
+                      </h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <div class="description">
+                        <p>no schema found for version. Code RESOURCE_NOT_FOUND.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <div class="description">
+                            <p>UNEXPECTED_ERROR.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="Record-resource">
+        <header>
+          <h1>Record</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>Record entry point.</p>
+            <p>Whenever modified (created, replaced or updated), the record is validated againt the resource's current schema.</p>
+            <p>DATE, TIME, and DATETIME data types are represented as string and validated against the followinbg formats :</p>
+            <ul>
+              <li>DATE : yyyy-MM-dd (ex.: 1977-04-22)</li>
+              <li>TIME : HH:mm:ss.SSSZ or HH:mm:ss.SSSZ (ex.: 18:56:44.123Z or 18:56:44Z)</li>
+              <li>DATETIME : yyyy-MM-ddTHH:mm:ss.SSSZ or yyyy-MM-ddTHH:mm:ssZ (ex.: 1977-04-22T18:56:44.123Z or 1977-04-22T18:56:44Z)</li>
+            </ul>
+            <p>DURATIONs are represented as integer values.</p>
+            <p>INTEGER, FLOAT, BOOLEAN and DURATION must not be represented as string litteral, they must be litteral from their
+              respective types.</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="Record-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="query-parameters">
+                <h3>query parameters</h3>
+                <section class="query-parameter">
+                  <h4>slugified: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>a object with the given record-id is found and returned</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-schema-version: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <div class="description">
+                        <p>no object found with the given record-id. Code RESOURCE_NOT_FOUND.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <div class="description">
+                            <p>UNEXPECTED_ERROR.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          <article class="method" id="Record-put-method">
+            <h2>PUT /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json: object</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>the object with id record-id update was successful</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-schema-version: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>ressource change is not acceptable. Code ILLEGAL_RESOURCE_CHANGE.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>no object found with the given record-id. Code RESOURCE_NOT_FOUND.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          <article class="method" id="Record-patch-method">
+            <h2>PATCH /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="request-payload-parts">
+                <h3>request payload</h3>
+                <section class="request-payload-part">
+                  <h4>application/json: object</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>the object with id record-id update was successful</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-schema-version: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>400</h4>
+                      <div class="description">
+                        <p>ressource change is not acceptable. Code ILLEGAL_RESOURCE_CHANGE.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>404</h4>
+                          <div class="description">
+                            <p>no object found with the given record-id. Code RESOURCE_NOT_FOUND.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>500</h4>
+                              <div class="description">
+                                <p>UNEXPECTED_ERROR.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                              </section>
+                            </section>
+          </article>
+          <article class="method" id="Record-head-method">
+            <h2>HEAD /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>204</h4>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-schema-version: string</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <div class="description">
+                        <p>Code RESOURCE_NOT_FOUND.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <div class="description">
+                            <p>UNEXPECTED_ERROR.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          <article class="method" id="Record-delete-method">
+            <h2>DELETE /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>204</h4>
+                  <div class="description">
+                    <p>Resource has been deleted</p>
+                  </div>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="RecordVersions-resource">
+        <header>
+          <h1>RecordVersions</h1>
+        </header>
+        <section class="documentation">
+          <div class="description">
+            <p>version history for the record</p>
+          </div>
+        </section>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="RecordVersions-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}/versions</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="headers">
+                <h3>headers</h3>
+                <section class="header">
+                  <h4>range: string</h4>
+                </section>
+                <section class="header">
+                  <h4>Authorization: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <div class="description">
+                    <p>complete list of object or last elements of the list of object</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Content-Range: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>Accept-Range: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object[][]</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>206</h4>
+                      <div class="description">
+                        <p>partial list of object</p>
+                      </div>
+                      <section class="headers">
+                        <h5>headers</h5>
+                        <section class="header">
+                          <h6>Content-Range: string</h6>
+                        </section>
+                        <section class="header">
+                          <h6>Accept-Range: string</h6>
+                        </section>
+                      </section>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json: object[][]</h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>416</h4>
+                          <div class="description">
+                            <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
+                          </div>
+                          <section class="headers">
+                            <h5>headers</h5>
+                            <section class="header">
+                              <h6>Content-Range: string</h6>
+                            </section>
+                            <section class="header">
+                              <h6>Accept-Range: string</h6>
+                            </section>
+                          </section>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                            <section class="response">
+                              <h4>404</h4>
+                              <div class="description">
+                                <p>resource not found, see code.</p>
+                              </div>
+                              <section class="response-payload-part">
+                                <h5>response payload</h5>
+                                <section class="response-payload-part">
+                                  <h6>application/json:
+                                    <a href="#Error-type">Error</a>
+                                  </h6>
+                                </section>
+                              </section>
+                              <section>
+                                <section class="response">
+                                  <h4>500</h4>
+                                  <div class="description">
+                                    <p>UNEXPECTED_ERROR.</p>
+                                  </div>
+                                  <section class="response-payload-part">
+                                    <h5>response payload</h5>
+                                    <section class="response-payload-part">
+                                      <h6>application/json:
+                                        <a href="#Error-type">Error</a>
+                                      </h6>
+                                    </section>
+                                  </section>
+                                  <section>
+                                  </section>
+                                </section>
+          </article>
+          </section>
+      </article>
+      <article class="resource" id="RecordVersion-resource">
+        <header>
+          <h1>RecordVersion</h1>
+        </header>
+        <section class="sequence-diagram">
+
+        </section>
+        <section class="methods">
+          <article class="method" id="RecordVersion-get-method">
+            <h2>GET /{
+              <b>account</b>}/{
+              <b>resource-name</b>}/{
+              <b>record-id</b>}/versions/{
+              <b>version</b>}</h2>
+            <section class="documentation">
+              <section class="uri-parameters">
+                <h3>uri parameters</h3>
+                <section class="uri-parameter">
+                  <h4>version: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>record-id: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>resource-name: string</h4>
+                </section>
+                <section class="uri-parameter">
+                  <h4>account: string</h4>
+                </section>
+              </section>
+              <section class="responses">
+                <h3>responses</h3>
+                <section class="response">
+                  <h4>200</h4>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>X-entity-id: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-entity-version: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>X-schema-version: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json: object</h6>
+                    </section>
+                  </section>
+                  <section>
+                    <section class="response">
+                      <h4>404</h4>
+                      <div class="description">
+                        <p>Code RESOURCE_NOT_FOUND.</p>
+                      </div>
+                      <section class="response-payload-part">
+                        <h5>response payload</h5>
+                        <section class="response-payload-part">
+                          <h6>application/json:
+                            <a href="#Error-type">Error</a>
+                          </h6>
+                        </section>
+                      </section>
+                      <section>
+                        <section class="response">
+                          <h4>500</h4>
+                          <div class="description">
+                            <p>UNEXPECTED_ERROR.</p>
+                          </div>
+                          <section class="response-payload-part">
+                            <h5>response payload</h5>
+                            <section class="response-payload-part">
+                              <h6>application/json:
+                                <a href="#Error-type">Error</a>
+                              </h6>
+                            </section>
+                          </section>
+                          <section>
+                          </section>
+                        </section>
+          </article>
+          </section>
+      </article>
+      <article id="overview">
+        <header>
+          <h1>Overview</h1>
+        </header>
+        <section class="sequence-diagram">
+
+        </section>
+      </article>
+      <article class="types" id="api-types">
+        <h1>API Types</h1>
+        <article class="type" id="ResourceDescription-type">
+          <h2>ResourceDescription</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="ResourceCreationData-type">
+          <h2>ResourceCreationData</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="Schema-type">
+          <h2>Schema</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="SchemaProperty-type">
+          <h2>SchemaProperty</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="Value-type">
+          <h2>Value</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="PropertyConstraint-type">
+          <h2>PropertyConstraint</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="SchemaUpdate-type">
+          <h2>SchemaUpdate</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="CoreScenario-type">
+          <h2>CoreScenario</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="Error-type">
+          <h2>Error</h2>
+          <section class="class-diaggram"></section>
+        </article>
+        <article class="type" id="all-types">
+          <h2>All Types</h2>
+          <section class="class-diaggram"></section>
+        </article>
+    </content>
+  </main>
+</body>
+
+</html>

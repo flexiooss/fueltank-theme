@@ -1,0 +1,36 @@
+#site-header,
+#site-aside {
+  position: fixed;
+  z-index: 2;
+}
+
+#site-header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 9px;
+  width: 100%;
+}
+
+#site-title {
+  height: 8rem;
+}
+
+#site-nav {
+  height: 5rem;
+}
+
+#site-aside {
+  width: 40rem;
+  z-index: 1;
+  top: 13rem;
+  left: 0;
+  bottom: 0;
+  padding: 1em 0 0 4em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 9px;
+}
+
+#site-content {
+  margin: 0 0 0 40rem;
+  padding: 13rem 0 0 4rem;
+  width: calc(100% - 40rem - 0.1px);
+}
