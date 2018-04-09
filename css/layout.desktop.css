@@ -1,10 +1,13 @@
-#site-header,
-#site-aside {
-  position: fixed;
-  z-index: 2;
-}
+/*
+//////////////////////////////////////////////////////////////////////////////
+// SITE HEADER
+////////////////////////////////////////////////////////////////////////////////
+//
+*/
 
 #site-header {
+  position: fixed;
+  z-index: 2;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 9px;
   width: 100%;
 }
@@ -13,24 +16,49 @@
   height: 8rem;
 }
 
-#site-nav {
-  height: 5rem;
-}
+/*
+//////////////////////////////////////////////////////////////////////////////
+// SITE ASIDE
+////////////////////////////////////////////////////////////////////////////////
+//
+*/
 
 #site-aside {
-  width: 40rem;
+  position: fixed;
+  width: 30rem;
   z-index: 1;
-  top: 13rem;
+  top: 7rem;
   left: 0;
   bottom: 0;
-  padding: 1em 0 0 4em;
+  padding: 2rem 0 0 3rem;
   overflow-y: auto;
   overflow-x: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0 0 9px;
 }
 
+/*
+//////////////////////////////////////////////////////////////////////////////
+// SITE CONTENT
+////////////////////////////////////////////////////////////////////////////////
+//
+*/
+
 #site-content {
-  margin: 0 0 0 40rem;
-  padding: 13rem 0 0 4rem;
-  width: calc(100% - 40rem - 0.1px);
+  margin: 0 0 0 30rem;
+  width: calc(100% - 30rem - 0.1px);
+  /* background-color: #333; */
+}
+
+#site-content>article {
+  margin: 0 50% 0 0;
+  background-color: #fdfdfd;
+}
+
+#site-content .dark-box {
+  width: 50%;
+  background-color: #2E3336;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

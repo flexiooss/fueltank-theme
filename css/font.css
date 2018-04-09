@@ -89,11 +89,15 @@ html {
 
 body {
   font-size: 1.5rem;
-  color: #444444;
 }
 
-.color-white,
-#site-nav a {
+.color-txt,
+body,
+#aside-nav a {
+  color: #444;
+}
+
+.color-white {
   color: #fff;
 }
 

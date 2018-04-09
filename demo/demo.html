@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Resources</title>
-  <link media="all" rel="stylesheet" href="../css/normalize.css" />
+  <link media="all" rel="stylesheet" href="../vendors/normalize.css" />
+  <link rel="stylesheet" href="../vendors/highlight/styles/darcula.css">
   <link media="all" rel="stylesheet" href="../css/font.css" />
   <link media="all" rel="stylesheet" type="text/css" href="../css/layout.css" />
-  <link media="all" rel="stylesheet" type="text/css" media="all and (min-width: 800px)" href="../css/layout.desktop.css" />
+  <link media="all and (min-width: 800px)" rel="stylesheet" type="text/css" href="../css/layout.desktop.css" />
 
 </head>
 
@@ -16,12 +17,12 @@
   <main>
 
     <header id="site-header">
-      <div id="site-title">
-        logo docs
-      </div>
       <nav id="site-nav">
         <ul>
-          <li>
+          <li class="site-nav-item">
+            <a href="#">home</a>
+          </li>
+          <li class="site-nav-item">
             <a href="#">home</a>
           </li>
         </ul>
@@ -31,105 +32,93 @@
     <aside id="site-aside">
       <nav id="aside-nav">
         <ul>
-          <li>
-            Resources
-            <nav>
-              <ul>
-                <li>
-                  <a href="#AccountResources-resource">AccountResources</a>
-                  <nav>
+          <li class="aside-nav-item-0">
+            <span class="aside-nav-chapter">Resources</span>
+            <ul>
+              <li>
+                <a href="#AccountResources-resource">AccountResources</a>
+                <ul>
+                  <li>
+                    <a href="#Resource-resource">Resource</a>
                     <ul>
                       <li>
-                        <a href="#Resource-resource">Resource</a>
-                        <nav>
-                          <ul>
-                            <li>
-                              <a href="#Schema-resource">Schema</a>
-                              <nav>
-                                <ul>
-                                  <li>
-                                    <a href="#SchemaVersions-resource">SchemaVersions</a>
-                                    <nav>
-                                      <ul>
-                                        <li>
-                                          <a href="#SchemaVersion-resource">SchemaVersion</a>
-                                        </li>
-                                      </ul>
-                                    </nav>
-                                  </li>
-                                </ul>
-                              </nav>
-                            </li>
-                            <li>
-                              <a href="#Record-resource">Record</a>
-                              <nav>
-                                <ul>
-                                  <li>
-                                    <a href="#RecordVersions-resource">RecordVersions</a>
-                                    <nav>
-                                      <ul>
-                                        <li>
-                                          <a href="#RecordVersion-resource">RecordVersion</a>
-                                        </li>
-                                      </ul>
-                                    </nav>
-                                  </li>
-                                </ul>
-                              </nav>
-                            </li>
-                          </ul>
-                        </nav>
+                        <a href="#Schema-resource">Schema</a>
+                        <ul>
+                          <li>
+                            <a href="#SchemaVersions-resource">SchemaVersions</a>
+                            <ul>
+                              <li>
+                                <a href="#SchemaVersion-resource">SchemaVersion</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#Record-resource">Record</a>
+                        <ul>
+                          <li>
+                            <a href="#RecordVersions-resource">RecordVersions</a>
+                            <ul>
+                              <li>
+                                <a href="#RecordVersion-resource">RecordVersion</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
-                  </nav>
-                </li>
-              </ul>
-            </nav>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
           <li>
-            <a href="#api-types">API Types</a>
-            <nav>
-              <ul>
-                <li>
-                  <a href="#ResourceDescription-type">ResourceDescription</a>
-                </li>
-                <li>
-                  <a href="#ResourceCreationData-type">ResourceCreationData</a>
-                </li>
-                <li>
-                  <a href="#Schema-type">Schema</a>
-                </li>
-                <li>
-                  <a href="#SchemaProperty-type">SchemaProperty</a>
-                </li>
-                <li>
-                  <a href="#Value-type">Value</a>
-                </li>
-                <li>
-                  <a href="#PropertyConstraint-type">PropertyConstraint</a>
-                </li>
-                <li>
-                  <a href="#SchemaUpdate-type">SchemaUpdate</a>
-                </li>
-                <li>
-                  <a href="#CoreScenario-type">CoreScenario</a>
-                </li>
-                <li>
-                  <a href="#Error-type">Error</a>
-                </li>
-                <li>
-                  <a href="#all-types">All types</a>
-                </li>
-              </ul>
-            </nav>
+            <a href="#api-types">
+              <span class="aside-nav-chapter">API Types</span>
+            </a>
+            <ul>
+              <li>
+                <a href="#ResourceDescription-type">ResourceDescription</a>
+              </li>
+              <li>
+                <a href="#ResourceCreationData-type">ResourceCreationData</a>
+              </li>
+              <li>
+                <a href="#Schema-type">Schema</a>
+              </li>
+              <li>
+                <a href="#SchemaProperty-type">SchemaProperty</a>
+              </li>
+              <li>
+                <a href="#Value-type">Value</a>
+              </li>
+              <li>
+                <a href="#PropertyConstraint-type">PropertyConstraint</a>
+              </li>
+              <li>
+                <a href="#SchemaUpdate-type">SchemaUpdate</a>
+              </li>
+              <li>
+                <a href="#CoreScenario-type">CoreScenario</a>
+              </li>
+              <li>
+                <a href="#Error-type">Error</a>
+              </li>
+              <li>
+                <a href="#all-types">All types</a>
+              </li>
+            </ul>
           </li>
           <li>
             <a href="#overview">Overview</a>
           </li>
         </ul>
+      </nav>
     </aside>
 
     <content id="site-content">
+      <div class="dark-box"></div>
       <article class="resource" id="AccountResources-resource">
         <header>
           <h1>AccountResources</h1>
@@ -185,11 +174,34 @@
                         <a href="#ResourceDescription-type">ResourceDescription</a>[]</h6>
                     </section>
                   </section>
+                  <pre><code class="json">{test:{toto:"bibi"}}</code></pre>
+                </section>
+                <section class="response">
+                  <h4>206</h4>
+                  <div class="description">
+                    <p>partial list of ResourceDescription</p>
+                  </div>
+                  <section class="headers">
+                    <h5>headers</h5>
+                    <section class="header">
+                      <h6>Content-Range: string</h6>
+                    </section>
+                    <section class="header">
+                      <h6>Accept-Range: string</h6>
+                    </section>
+                  </section>
+                  <section class="response-payload-part">
+                    <h5>response payload</h5>
+                    <section class="response-payload-part">
+                      <h6>application/json:
+                        <a href="#ResourceDescription-type">ResourceDescription</a>[]</h6>
+                    </section>
+                  </section>
                   <section>
                     <section class="response">
-                      <h4>206</h4>
+                      <h4>416</h4>
                       <div class="description">
-                        <p>partial list of ResourceDescription</p>
+                        <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
                       </div>
                       <section class="headers">
                         <h5>headers</h5>
@@ -200,115 +212,6 @@
                           <h6>Accept-Range: string</h6>
                         </section>
                       </section>
-                      <section class="response-payload-part">
-                        <h5>response payload</h5>
-                        <section class="response-payload-part">
-                          <h6>application/json:
-                            <a href="#ResourceDescription-type">ResourceDescription</a>[]</h6>
-                        </section>
-                      </section>
-                      <section>
-                        <section class="response">
-                          <h4>416</h4>
-                          <div class="description">
-                            <p>the specified range is not acceptable (Error code is ILLEGAL_RANGE_SPEC).</p>
-                          </div>
-                          <section class="headers">
-                            <h5>headers</h5>
-                            <section class="header">
-                              <h6>Content-Range: string</h6>
-                            </section>
-                            <section class="header">
-                              <h6>Accept-Range: string</h6>
-                            </section>
-                          </section>
-                          <section class="response-payload-part">
-                            <h5>response payload</h5>
-                            <section class="response-payload-part">
-                              <h6>application/json:
-                                <a href="#Error-type">Error</a>
-                              </h6>
-                            </section>
-                          </section>
-                          <section>
-                            <section class="response">
-                              <h4>404</h4>
-                              <div class="description">
-                                <p>resource not found, see code.</p>
-                              </div>
-                              <section class="response-payload-part">
-                                <h5>response payload</h5>
-                                <section class="response-payload-part">
-                                  <h6>application/json:
-                                    <a href="#Error-type">Error</a>
-                                  </h6>
-                                </section>
-                              </section>
-                              <section>
-                                <section class="response">
-                                  <h4>500</h4>
-                                  <div class="description">
-                                    <p>UNEXPECTED_ERROR.</p>
-                                  </div>
-                                  <section class="response-payload-part">
-                                    <h5>response payload</h5>
-                                    <section class="response-payload-part">
-                                      <h6>application/json:
-                                        <a href="#Error-type">Error</a>
-                                      </h6>
-                                    </section>
-                                  </section>
-                                  <section>
-                                  </section>
-                                </section>
-          </article>
-          <article class="method" id="AccountResources-post-method">
-            <h2>POST /{
-              <b>account</b>}</h2>
-            <section class="documentation">
-              <section class="uri-parameters">
-                <h3>uri parameters</h3>
-                <section class="uri-parameter">
-                  <h4>account: string</h4>
-                </section>
-              </section>
-              <section class="headers">
-                <h3>headers</h3>
-                <section class="header">
-                  <h4>Authorization: string</h4>
-                </section>
-              </section>
-              <section class="request-payload-parts">
-                <h3>request payload</h3>
-                <section class="request-payload-part">
-                  <h4>application/json:
-                    <a href="#ResourceCreationData-type">ResourceCreationData</a>
-                  </h4>
-                </section>
-              </section>
-              <section class="responses">
-                <h3>responses</h3>
-                <section class="response">
-                  <h4>201</h4>
-                  <div class="description">
-                    <p>a ResourceDescription resoure is created given the ResourceCreationData provided. the created resource
-                      uri is returned.</p>
-                  </div>
-                  <section class="headers">
-                    <h5>headers</h5>
-                    <section class="header">
-                      <h6>Location: string</h6>
-                    </section>
-                    <section class="header">
-                      <h6>X-Entity-Id: string</h6>
-                    </section>
-                  </section>
-                  <section>
-                    <section class="response">
-                      <h4>400</h4>
-                      <div class="description">
-                        <p>request is not acceptable. Code ILLEGAL_RESOURCE_CREATION.</p>
-                      </div>
                       <section class="response-payload-part">
                         <h5>response payload</h5>
                         <section class="response-payload-part">
@@ -345,11 +248,106 @@
                                   </h6>
                                 </section>
                               </section>
-                              <section>
+                            </section>
+                          </section>
+                        </section>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </section>
+        </section>
+        </section>
+        </article>
+        <article class="method" id="AccountResources-post-method">
+          <h2>POST /{
+            <b>account</b>}</h2>
+          <section class="documentation">
+            <section class="uri-parameters">
+              <h3>uri parameters</h3>
+              <section class="uri-parameter">
+                <h4>account: string</h4>
+              </section>
+            </section>
+            <section class="headers">
+              <h3>headers</h3>
+              <section class="header">
+                <h4>Authorization: string</h4>
+              </section>
+            </section>
+            <section class="request-payload-parts">
+              <h3>request payload</h3>
+              <section class="request-payload-part">
+                <h4>application/json:
+                  <a href="#ResourceCreationData-type">ResourceCreationData</a>
+                </h4>
+              </section>
+            </section>
+            <section class="responses">
+              <h3>responses</h3>
+              <section class="response">
+                <h4>201</h4>
+                <div class="description">
+                  <p>a ResourceDescription resoure is created given the ResourceCreationData provided. the created resource
+                    uri is returned.</p>
+                </div>
+                <section class="headers">
+                  <h5>headers</h5>
+                  <section class="header">
+                    <h6>Location: string</h6>
+                  </section>
+                  <section class="header">
+                    <h6>X-Entity-Id: string</h6>
+                  </section>
+                </section>
+                <section>
+                  <section class="response">
+                    <h4>400</h4>
+                    <div class="description">
+                      <p>request is not acceptable. Code ILLEGAL_RESOURCE_CREATION.</p>
+                    </div>
+                    <section class="response-payload-part">
+                      <h5>response payload</h5>
+                      <section class="response-payload-part">
+                        <h6>application/json:
+                          <a href="#Error-type">Error</a>
+                        </h6>
+                      </section>
+                    </section>
+                    <section>
+                      <section class="response">
+                        <h4>404</h4>
+                        <div class="description">
+                          <p>resource not found, see code.</p>
+                        </div>
+                        <section class="response-payload-part">
+                          <h5>response payload</h5>
+                          <section class="response-payload-part">
+                            <h6>application/json:
+                              <a href="#Error-type">Error</a>
+                            </h6>
+                          </section>
+                        </section>
+                        <section>
+                          <section class="response">
+                            <h4>500</h4>
+                            <div class="description">
+                              <p>UNEXPECTED_ERROR.</p>
+                            </div>
+                            <section class="response-payload-part">
+                              <h5>response payload</h5>
+                              <section class="response-payload-part">
+                                <h6>application/json:
+                                  <a href="#Error-type">Error</a>
+                                </h6>
                               </section>
                             </section>
-          </article>
-          </section>
+                            <section>
+                            </section>
+                          </section>
+        </article>
+        </section>
       </article>
       <article class="resource" id="Resource-resource">
         <header>
@@ -1409,6 +1407,14 @@
                               <section>
                               </section>
                             </section>
+                          </section>
+                        </section>
+                      </section>
+                    </section>
+                  </section>
+                </section>
+              </section>
+            </section>
           </article>
           <article class="method" id="Record-head-method">
             <h2>HEAD /{
@@ -1669,9 +1675,12 @@
                                       </h6>
                                     </section>
                                   </section>
-                                  <section>
-                                  </section>
                                 </section>
+                              </section>
+                            </section>
+                          </section>
+                        </section>
+                      </section>
           </article>
           </section>
       </article>
@@ -1813,6 +1822,10 @@
         </article>
     </content>
   </main>
+  <script src="../vendors/highlight/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 
 </html>
