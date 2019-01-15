@@ -1,0 +1,229 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+}
+
+body,
+input,
+textarea {
+  color: #191919;
+  font: 14px/140% 'Open Sans', Arial, sans-serif;
+}
+
+body > header {
+  position: fixed;
+  padding: 20px;
+  padding-left: 260px;
+  width: 100%;
+  background-color: #23303D;
+  z-index: 1;
+}
+
+h1 {
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+  top: -60px;
+}
+
+a:hover {
+  color: #29aeef;
+  text-decoration: none;
+}
+
+:target {
+  padding-top: 70px;
+  margin-top: -20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+code {
+  margin: 0;
+}
+
+.uri-param {
+  color: #EEA900;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  padding-left: 260px;
+}
+
+main > article {
+  margin: 1em 0 ;
+  margin-top: 60px;
+}
+
+.resource {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+main header{
+  width: 100%;
+  margin: 1em;
+}
+
+.resource .sequence-diagram {
+  top: 80px;
+  margin: 1em;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.resource .methods {
+  flex-grow: 6;
+  margin: 1em;
+}
+
+ressource-name{
+  color: #666;
+}
+
+.methods label {
+  background: #333;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  padding: 15px;
+  margin: 10px 0;
+  color: #fff;
+  height: 100%;
+
+  /* not selectable */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.method > label > span {
+  padding: 3px 6px;
+  margin-top: -3px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.method > label > h3 {
+  flex-grow: 9;
+}
+
+.get {
+  background-color: #119BDF;
+}
+
+.post {
+  background-color: #52CE0E;
+}
+
+.put {
+  background-color: #E08F10;
+}
+
+.patch {
+  background-color: #ff8421;
+}
+
+.delete {
+  background-color: #E02A10;
+}
+
+.methods .documentation {
+  display: none;
+}
+
+.methods input {
+  display: none;
+}
+
+.methods input[type=checkbox]:checked ~ .documentation {
+  display: block;
+}
+
+.methods label:hover {
+  background: #555;
+}
+
+.documentation {
+  padding: 5px;
+}
+
+.documentation h4 {
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.documentation h5 {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.responses .response {
+  background: #eef1f2;
+  border: 1px solid #e2e7ea;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  color: #546974;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.responses .response h5 {
+  font-size: 16px;
+  color: #444;
+  padding: 2px 5px;
+  background:  #EEA900;
+  margin-bottom: 5px;
+
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.responses h6 {
+  font-size: 14px;
+  margin: 10px 0px 0;
+}
+
+.responses h7 {
+  padding-left: 20px;
+  position: relative;
+}
+
+.type {
+  padding: 2em;
+}
+
+.resource .class-diaggram svg {
+  max-height: 90vh;
+  width: auto !important;
+}
+
+svg {
+  max-width: 100%;
+  height: auto !important;
+}

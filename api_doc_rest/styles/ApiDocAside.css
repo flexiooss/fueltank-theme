@@ -1,0 +1,52 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #29aeef;
+  text-decoration: none;
+}
+
+main a:visited {
+  color: #29aeef;
+  text-decoration: none;
+}
+
+aside {
+    z-index: 2;
+  background: #191919;
+  color: #fff;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  width: 240px;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+}
+
+aside ul ul {
+  padding-left: 20px;
+}
+
+aside ul li a {
+  display: block;
+  color: #fff;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+.uri-param {
+  color: #EEA900;
+  font-weight: bold;
+}
+
+.nav-title {
+  display: block;
+  font-size: 20px;
+  padding: 0;
+  font-weight: bold;
+}
