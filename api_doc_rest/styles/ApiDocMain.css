@@ -218,7 +218,7 @@ ressource-name{
   padding: 2em;
 }
 
-.resource .sequence-diaggram svg {
+.resource .sequence-diagram svg {
   max-height: 90vh;
   width: auto !important;
 }
